@@ -1,7 +1,8 @@
 .notification {
     border: 1px solid #efefef;
-    border-radius: 4px;
+    border-radius: 10px;
     background: #fff;
+    opacity: 0.95;
     padding: 10px;
     display: flex;
     width: 100%;
@@ -14,10 +15,12 @@
     width: 50px;
     height: 50px;
     padding-right: 10px;
+    border-radius: 20px;
 }
 
 .notification img {
    width: 100%;
+   border-radius: 20px;
 }
 
 .notification .content {
