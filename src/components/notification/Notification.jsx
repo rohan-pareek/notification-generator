@@ -2,6 +2,11 @@ import React from "react";
 import "./Notification.css";
 
 const Notification = ({amount, time, timeType}) => {
+  const formattedAmount = Intl.NumberFormat("en-US", {
+    style: 'currency',
+    currency: 'USD'
+  }).format(amount);
+
   return (
     <section className="notification">
       <div className="logo">
@@ -13,7 +18,7 @@ const Notification = ({amount, time, timeType}) => {
           <span className="time">{time}{timeType} ago</span>
         </div>
         <div className="message">
-          ${amount}.00 has been deposited into your account.
+          {formattedAmount} has been deposited into your account.
         </div>
       </div>
     </section>
